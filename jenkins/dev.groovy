@@ -3,7 +3,7 @@ def name="";
 node {  
     stage('check') { 
         echo("check")
-		
+	echo(install)	
     }
     stage('install') { 
         echo("install")
