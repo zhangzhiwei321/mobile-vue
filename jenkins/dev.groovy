@@ -2,8 +2,8 @@ def name="";
 
 node {  
     stage('check') { 
-        echo("check");
-		echo(install);
+        echo("check")
+		
     }
     stage('install') { 
         echo("install")
