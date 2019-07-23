@@ -5,14 +5,14 @@ node {
         echo("check");
 		echo(name);
 		try{
-			git branch
-			git checkout  master
-			git pull 
+		sh	git branch
+		sh	git checkout  master
+		sh	git pull 
 		}catch(e){
-			git clone  git@github.com:zhangzhiwei321/jenkins-test1.git
-			git branch
-			git checkout  master
-			git pull 
+		sh	git clone  git@github.com:zhangzhiwei321/jenkins-test1.git
+		sh	git branch
+		sh	git checkout  master
+		sh	git pull 
 		}
 		
 
@@ -21,8 +21,8 @@ node {
         echo("install")
 		echo(install);
 		if(install){
-			rm -rf node_modules*
-			cnpm i
+		sh	rm -rf node_modules*
+		sh	cnpm i
 		}else{
 			
 		}
@@ -37,7 +37,7 @@ node {
 	}
 	stage("release"){
 		echo("release")
-		rm -f /usr/local/nginx/web/vue/*
-		mv dist/* /usr/local/nginx/web/vue
+	sh	rm -f /usr/local/nginx/web/vue/*
+	sh	mv dist/* /usr/local/nginx/web/vue
 	}
 }
