@@ -2,6 +2,7 @@ def name="";
 
 node {  
     stage('check') { 
+<<<<<<< .mine
         echo("check");
 		echo(name);
 		try{
@@ -15,9 +16,25 @@ node {
 			git pull 
 		}
 		
+=======
+        echo("check")
+	echo(name)
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> .theirs
     }
     stage('install') { 
         echo("install")
+<<<<<<< .mine
 		echo(install);
 		if(install){
 			rm -rf node_modules*
@@ -25,6 +42,15 @@ node {
 		}else{
 			
 		}
+=======
+	    echo(install)	;
+
+
+
+
+
+
+>>>>>>> .theirs
     }
     stage('build') { 
         echo("build")
