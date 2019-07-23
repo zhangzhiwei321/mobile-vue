@@ -9,7 +9,7 @@ node {
 		sh	"git checkout  master"
 		sh	"git pull" 
 		}catch(e){
-			"git clone  git@github.com:zhangzhiwei321/jenkins-test1.git"
+		sh	"git clone  git@github.com:zhangzhiwei321/jenkins-test1.git"
 		sh	"git branch"
 		sh	"git checkout  master"
 		sh	"git pull" 
