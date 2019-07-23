@@ -5,14 +5,14 @@ node {
         echo("check");
 		echo(name);
 		try{
-		sh	git branch
-		sh	git checkout  master
-		sh	git pull 
+		sh	"git branch"
+		sh	"git checkout  master"
+		sh	"git pull" 
 		}catch(e){
-		sh	git clone  git@github.com:zhangzhiwei321/jenkins-test1.git
-		sh	git branch
-		sh	git checkout  master
-		sh	git pull 
+		sh	"git clone  git@github.com:zhangzhiwei321/jenkins-test1.git"
+		sh	"git branch"
+		sh	"git checkout  master"
+		sh	"git pull" 
 		}
 		
 
@@ -37,7 +37,7 @@ node {
 	}
 	stage("release"){
 		echo("release")
-	sh	rm -f /usr/local/nginx/web/vue/*
+	sh	rm -rf /usr/local/nginx/web/vue/*
 	sh	mv dist/* /usr/local/nginx/web/vue
 	}
 }
