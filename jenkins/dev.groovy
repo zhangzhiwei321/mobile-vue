@@ -21,8 +21,8 @@ node {
         echo("install")
 		echo(install);
 		if(install){
-		sh	rm -rf node_modules*
-		sh	cnpm i
+		sh	"rm -rf node_modules*"
+		sh	"cnpm i"
 		}else{
 			
 		}
@@ -37,7 +37,7 @@ node {
 	}
 	stage("release"){
 		echo("release")
-	sh	rm -rf /usr/local/nginx/web/vue/*
-	sh	mv dist/* /usr/local/nginx/web/vue
+	sh	"rm -rf /usr/local/nginx/web/vue/*"
+	sh	"mv dist/* /usr/local/nginx/web/vue"
 	}
 }
