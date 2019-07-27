@@ -7,11 +7,11 @@ node {
 	    try{
 		sh      "find gtihub1/jenkins-test1 -maxdepth 1"
 	    }catch(e){
-		sh	"git clone  https://github.com/zhangzhiwei321/jenkins-test1.git"
+		sh	"git clone  git@github.com:zhangzhiwei321/jenkins-test1.git"
 
 	    }
 	    	sh	"git status"
-		sh	"git pull https://github.com/zhangzhiwei321/jenkins-test1.git" 
+		sh	"git pull git@github.com:zhangzhiwei321/jenkins-test1.git" 
 		sh	"git branch"
 		sh	"git checkout  master"
 
