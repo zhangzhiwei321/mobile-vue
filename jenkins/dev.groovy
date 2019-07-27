@@ -5,10 +5,10 @@ node {
         echo("check");
 	echo(name);
 	    try{
-		sh      "cd /var/lib/jenkins/workspace/gtihub1/jenkins-test1"   
+		sh	"git pull https://github.com/zhangzhiwei321/jenkins-test1.git" 
 	    }catch(e){
 		sh	"git clone  https://github.com/zhangzhiwei321/jenkins-test1.git"
-		sh      "cd /var/lib/jenkins/workspace/gtihub1/jenkins-test1
+
 	    }
 	    	sh	"git status"
 		sh	"git pull https://github.com/zhangzhiwei321/jenkins-test1.git" 
