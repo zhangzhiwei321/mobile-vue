@@ -5,7 +5,7 @@ node {
         echo("check");
 	echo(name);
 	    try{
-		sh      "find gtihub1/jenkins-test1"
+		sh      "find gtihub1/jenkins-test1 -maxdepth 1"
 	    }catch(e){
 		sh	"git clone  https://github.com/zhangzhiwei321/jenkins-test1.git"
 
