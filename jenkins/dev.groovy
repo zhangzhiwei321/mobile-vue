@@ -10,10 +10,9 @@ node {
 		sh	"git clone  git@github.com:zhangzhiwei321/jenkins-test1.git"
 
 	    }
-	    	sh	"git status"
 		sh	"git pull git@github.com:zhangzhiwei321/jenkins-test1.git" 
 		sh	"git branch"
-		sh	"git checkout  master"
+		sh	"git checkout  dev"
 
     }
     stage('install') { 
