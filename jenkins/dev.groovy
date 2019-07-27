@@ -11,7 +11,7 @@ node {
 		sh	"git pull" 
 		}catch(e){
 		sh	"git clone  https://github.com/zhangzhiwei321/jenkins-test1.git"
-		sh      "cd jenkins-test1"
+		sh      "cd /var/lib/jenkins/workspace/gtihub1/jenkins-test1"
 		sh	"git branch"
 		sh	"git checkout  master"
 		sh	"git pull" 
