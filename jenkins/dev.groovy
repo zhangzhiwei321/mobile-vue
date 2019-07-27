@@ -3,7 +3,7 @@ def name="";
 node {  
     stage('check') { 
         echo("check");
-	    sh "rm -rf /var/lib/jenkins/workspace/gtihub1/jenkins-test1/*"
+	    sh "rm -rf /var/lib/jenkins/workspace/gtihub1/jenkins-test1"
 		echo(name);
 		try{
 		sh	"git branch"
