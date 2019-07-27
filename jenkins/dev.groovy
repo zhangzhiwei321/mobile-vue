@@ -15,7 +15,6 @@ node {
     }
     stage('install') { 
         echo("install")
-	    sh      "cd /var/lib/jenkins/workspace/gtihub1/jenkins-test1"
 		echo(install);
 		if(install){
 		sh	"rm -rf node_modules*"
@@ -26,7 +25,6 @@ node {
     }
     stage('build') { 
         echo("build")
-	    sh      "cd /var/lib/jenkins/workspace/gtihub1/jenkins-test1"
 		npm run build
     }
 
