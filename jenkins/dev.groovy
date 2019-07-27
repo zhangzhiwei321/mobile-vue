@@ -5,18 +5,15 @@ node {
         echo("check");
 	echo(name);
 	    try{
-		sh	"git status"
-		sh	"git pull https://github.com/zhangzhiwei321/jenkins-test1.git" 
-		sh	"git branch"
-		sh	"git checkout  master"
+		sh      "cd /var/lib/jenkins/workspace/gtihub1/jenkins-test1"   
 	    }catch(e){
 		sh	"git clone  https://github.com/zhangzhiwei321/jenkins-test1.git"
-                sh	"git status"
+		sh      "cd /var/lib/jenkins/workspace/gtihub1/jenkins-test1
+	    }
+	    	sh	"git status"
 		sh	"git pull https://github.com/zhangzhiwei321/jenkins-test1.git" 
 		sh	"git branch"
 		sh	"git checkout  master"
-	    }
-	    
 
     }
     stage('install') { 
