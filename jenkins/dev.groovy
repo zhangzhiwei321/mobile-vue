@@ -24,14 +24,14 @@ node {
 		echo(install);
 		if(install){
 		sh	"rm -rf node_modules*"
-		sh	"npm i"
+		sh	"cnpm i"
 		}else{
 			
 		}
     }
     stage('build') { 
         echo("build")
-		npm run build
+		sh     "cnpm run build"
     }
 
 	stage("release"){
