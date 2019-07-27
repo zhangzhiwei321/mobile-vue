@@ -26,7 +26,7 @@ node {
 		echo(install);
 		if(install){
 		sh	"rm -rf node_modules*"
-		sh	"cnpm i"
+		sh	"npm i"
 		}else{
 			
 		}
