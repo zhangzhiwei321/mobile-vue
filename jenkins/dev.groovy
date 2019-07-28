@@ -4,7 +4,7 @@ node {
     stage('check') { 
         echo("check");
 	echo(name);	
-	    	sh      "cd /var/lib/jenkins/workspace/gtihub1/jenkins-test1"
+	    	sh      "cd /var/lib/jenkins/workspace/Pipeline-test1/jenkins-test1"
 		sh	"git status"
 	    	sh	"git pull origin dev:dev"
 	    	sh	"git branch"
