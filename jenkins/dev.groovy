@@ -3,18 +3,11 @@ def name="";
 node {  
     stage('check') { 
         echo("check");
-	echo(name);
-	    try{
-		sh      "cd /var/lib/jenkins/workspace/gtihub1/jenkins-test1"
-	    }catch(e){
-		sh	"git clone  git@github.com:zhangzhiwei321/jenkins-test1.git"
-		sh      "cd /var/lib/jenkins/workspace/gtihub1/jenkins-test1"
-
-	    }
-		sh	"git pull git@github.com:zhangzhiwei321/jenkins-test1.git" 
-		sh	"git branch"
-		sh	"git checkout  dev"
-
+	echo(name);	    
+		sh	"git status"
+	    	sh	"git pull origin dev:dev"
+	    	sh	"git branch"
+	    	sh	"git checkout dev"
     }
     stage('install') { 
         echo("install")
