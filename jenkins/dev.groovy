@@ -4,12 +4,12 @@ node {
     stage('check') { 
         echo("check");
 	echo(name);	
-	    	sh      "rm -rf /var/lib/jenkins/workspace/Pipeline-test1/jenkins-test1/*"
-	    	sh      "git clone git@github.com:zhangzhiwei321/jenkins-test1.git/"
-		sh	"git status"
-	    	sh	"git pull origin dev"
-	    	sh	"git branch"
-	    	sh	"git checkout dev"
+	         rm -rf /var/lib/jenkins/workspace/Pipeline-test1/jenkins-test1/*
+	    	 git clone git@github.com:zhangzhiwei321/jenkins-test1.git/
+		 git status
+	         git pull origin dev
+	    	 git branch
+	    	 git checkout dev
     }
     stage('install') { 
         echo("install")
