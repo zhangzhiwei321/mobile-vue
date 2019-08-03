@@ -4,9 +4,8 @@ node {
     stage('check') { 
         	echo("check");
 		echo(name);	
-
-		 sh 'git status'
 	         sh 'git pull origin dev'
+	    	sh 'git status'
 	    	 sh 'git branch'
 	    	 sh 'git checkout dev'
     }
