@@ -4,10 +4,10 @@ node {
     stage('check') { 
         	echo("check");
 		echo(name);	
-	         sh 'git pull origin dev'
-	    	sh 'git status'
-	    	 sh 'git branch'
-	    	 sh 'git checkout dev'
+	        git 'pull origin dev'
+	    	git 'status'
+	    	git 'branch'
+	    	git 'checkout dev'
     }
     stage('install') { 
         echo("install")
