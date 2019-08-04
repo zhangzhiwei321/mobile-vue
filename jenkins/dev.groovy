@@ -4,6 +4,7 @@ node {
     stage('check') { 
         	echo("check");
 		echo(name);	
+	    	cd jenkins-test1
 	        git 'pull origin dev'
 	    	git 'status'
 	    	git 'branch'
