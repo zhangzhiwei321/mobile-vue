@@ -1,3 +1,4 @@
+#!/bin/bash -ilex
 def name="";
 
 node {  
