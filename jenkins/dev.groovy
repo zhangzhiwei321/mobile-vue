@@ -6,10 +6,10 @@ node {
         	echo("check");
 		echo(name);
 	    	sh 'cd jenkins-test1'
-	        git 'pull origin dev'
-	    	git 'status'
-	    	git 'branch'
-	    	git 'checkout dev'
+	        git pull origin dev
+	    	git status
+	    	git branch
+	    	git checkout dev
     }
     stage('install') { 
         echo("install")
