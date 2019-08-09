@@ -30,4 +30,4 @@ node {
 		sh "rm -rf /web/vue/*"
 		sh "mv dist/* /web/vue"
 	}
-} 
+}
