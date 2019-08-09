@@ -31,3 +31,5 @@ node {
 		sh "mv dist/* /web/vue"
 	}
 }
+  
+  
