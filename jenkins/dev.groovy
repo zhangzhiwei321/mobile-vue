@@ -28,6 +28,6 @@ node {
 	stage("release") {
 		echo("release")
 		sh "rm -rf /web/vue/*"
-		sh "mv ./jenkins-test1/dist/* /web/vue"
+		sh "mv dist/* /web/vue"
 	}
 }
