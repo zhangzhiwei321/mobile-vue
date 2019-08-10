@@ -16,6 +16,7 @@ node {
 		echo("install")
 		echo(install);
 		if (install) {
+			echo(install);
 			sh "rm -rf node_modules*"
 			sh "cnpm i"
 		}
