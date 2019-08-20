@@ -4,7 +4,7 @@ node {
 	stage('check') {
 		echo("check");
 		echo(name);
-		git url: 'git@github.com:zhangzhiwei321/mobile-vue.git', branch: 'dev'
+		git url: 'git@github.com:zhangzhiwei321/mobile-vue.git', branch: 'dev';
 	}
 	stage('install') {
 		echo("install")
