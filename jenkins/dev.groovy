@@ -1,16 +1,10 @@
-#!/bin/bash -ilex
-
 def name = "";
 
 node {
 	stage('check') {
 		echo("check");
 		echo(name);
-		sh 'ls'
-		sh 'git pull origin dev'
-		sh 'git status'
-		sh 'git branch'
-		sh 'git checkout dev'
+		git url: 'git@github.com:zhangzhiwei321/mobile-vue.git', branch: 'dev'
 	}
 	stage('install') {
 		echo("install")
@@ -31,4 +25,4 @@ node {
 		sh "rm -rf /web/vue/*"
 		sh "mv dist/* /web/vue"
 	}
-}   
+}
