@@ -1,4 +1,4 @@
-# nginx-proxy
+# mobile-vue
 
 ## Project setup
 ```
