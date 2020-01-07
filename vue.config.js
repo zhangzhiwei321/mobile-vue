@@ -1,6 +1,6 @@
 module.exports = {
   // 选项...
-  publicPath: "/",
+  publicPath: "/web/vue/",
   lintOnSave: process.env.NODE_ENV !== 'production',
   devServer: {
 
