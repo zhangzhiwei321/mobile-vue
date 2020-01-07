@@ -28,5 +28,6 @@ const routes = [
 
 export default new VueRouter({
     mode: 'history',
+    base: '/web/vue/',
     routes
 })
