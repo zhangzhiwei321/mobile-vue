@@ -1,8 +1,15 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 
-Vue.config.productionTip = false
+import router from '@/router';
+import store from '@/store';
+import '@/utils/rem.js'
+import api from '@/api'
+console.log(api.api())
+import 'view-design/dist/styles/iview.css';
 
 new Vue({
-  render: h => h(App),
+  router,
+  store,
+  render: h => h(App)
 }).$mount('#app')
