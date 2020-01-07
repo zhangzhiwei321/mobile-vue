@@ -39,7 +39,7 @@ export default {
   methods: {
     go() {
       this.$router.push({
-        name: "index",
+        name: "login",
         params: { id: Math.floor(Math.random() * 1000) }
       });
     },

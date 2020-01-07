@@ -5,7 +5,7 @@ Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/:id',
+        path: '/',
         name: 'index',
         component: () => import('@/view/index.vue')
     },
