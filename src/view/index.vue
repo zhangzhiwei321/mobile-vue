@@ -24,7 +24,8 @@
 import { mapState, mapGetters, mapMutations, mapActions } from "vuex";
 import childrenA from "@/components/index/childrenA.vue";
 import { Button, Table } from "view-design";
-
+import CompressImg from 'compress-image-browser';
+console.log(new CompressImg())
 export default {
   data() {
     return {

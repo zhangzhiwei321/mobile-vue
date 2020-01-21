@@ -5,7 +5,7 @@ export default {
     },
     getters: {
         childrenBCountDouble(state, getters, rootState) {
-            return rootState.count * states.childrenBCount
+            return rootState.count * state.childrenBCount
             console.log(getters)
         }
     },
