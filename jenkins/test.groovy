@@ -22,8 +22,9 @@ pipeline {
         }
     }
     post {
-        agent any
+        
         always{
+            agent any
             sh 'node -v'
             sh 'git --version'
         }
