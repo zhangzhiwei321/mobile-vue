@@ -1,5 +1,10 @@
 pipeline {
-    agent any 
+    agent {
+        docker {
+            image 'node'
+            args '--name vue-mobile'
+        }
+    } 
     stages {
         stage('Build') { 
             steps {
@@ -13,7 +18,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh "docker ps"
+                sh "npm install --registry https://registry.npm.taobao.org"
             }
         }
     }
