@@ -24,7 +24,6 @@ pipeline {
     post {
         
         always{
-            node {}
             sh 'node -v'
             sh 'git --version'
         }
