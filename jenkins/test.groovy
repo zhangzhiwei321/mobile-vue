@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') { 
             agent {
-                node{ reuseNode ture}
+                reuseNode ture
             }
             steps {
                 sh 'echo docker ps'
