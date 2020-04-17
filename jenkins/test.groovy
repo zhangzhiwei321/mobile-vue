@@ -6,9 +6,6 @@ pipeline {
             steps {
                 sh "ls" 
             }
-            steps {
-                sh "echo install"
-            }
         }
         stage('Test') { 
             agent any
