@@ -1,24 +1,29 @@
 pipeline {
-    agent {
-        docker {
-            image 'node'
-            args '--name vue-mobile'
-        }
-    } 
+    agent none
     stages {
         stage('Build') { 
+            agent {docker node}
             steps {
                 sh "ls" 
             }
-        }
-        stage('Test') { 
             steps {
                 sh "echo install"
             }
-        }
-        stage('Deploy') { 
             steps {
                 sh "npm run build"
+            }
+        }
+        stage('Test') { 
+            agent any
+            steps {
+                sh 'echo docker ps'
+            }
+        }
+        stage('Deploy') { 
+            agent any
+            steps{
+                sh 'git --version'
+                sh 'docker --version'
             }
         }
     }
