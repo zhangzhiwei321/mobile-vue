@@ -2,7 +2,7 @@ pipeline {
     agent none
     stages {
         stage('Build') { 
-            agent {docker node}
+            agent {docker 'node'}
             steps {
                 sh "ls" 
             }
