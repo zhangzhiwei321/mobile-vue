@@ -1,6 +1,12 @@
 pipeline {
     agent none
     stages {
+        stage('Check') { 
+            agent any
+            steps {
+                sh "echo ${env}"
+            }
+        }
         stage('Build') { 
             agent {docker 'node'}
             steps {
