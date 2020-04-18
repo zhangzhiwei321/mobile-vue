@@ -4,7 +4,7 @@ pipeline {
         stage('Check') { 
             agent any
             steps {
-                sh "echo ${env}"
+                sh "echo ${BUILD_ID}"
             }
         }
         stage('Build') { 
