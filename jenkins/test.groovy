@@ -4,7 +4,16 @@ pipeline {
         stage('Check') { 
             agent any
             steps {
-                sh "echo ${BUILD_ID}"
+                sh "echo BUILD_NUMBER=${BUILD_NUMBER}"
+                sh "echo BUILD_TAG=${BUILD_TAG}"
+                sh "echo BUILD_URL=${BUILD_URL}"
+                sh "echo EXECUTOR_NUMBER=${EXECUTOR_NUMBER}"
+                sh "echo JAVA_HOME=${JAVA_HOME}"
+                sh "echo JENKINS_URL=${JENKINS_URL}"
+                sh "echo JOB_NAME=${JOB_NAME}"
+                sh "echo NODE_NAME=${NODE_NAME}"
+                sh "echo WORKSPACE=${WORKSPACE}"
+                sh "echo params=${params}"
             }
         }
         stage('Build') { 
