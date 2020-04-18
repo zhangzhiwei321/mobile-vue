@@ -1,7 +1,7 @@
 pipeline {
     agent none
     stages {
-        stage('Check') { 
+          stage('Check') { 
             agent any
             steps {
                 sh "echo BUILD_NUMBER=${BUILD_NUMBER}"
@@ -14,6 +14,9 @@ pipeline {
                 sh "echo NODE_NAME=${NODE_NAME}"
                 sh "echo WORKSPACE=${WORKSPACE}"
                 sh "echo params=${params}"
+            }
+            steps {
+                input '你好'
             }
         }
         stage('Build') { 
