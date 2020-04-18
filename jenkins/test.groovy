@@ -1,4 +1,3 @@
-input '00000'
 pipeline {
     agent none
     stages {
