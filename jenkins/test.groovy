@@ -3,7 +3,16 @@ pipeline {
     stages {
           stage('Check') { 
             agent any
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                }
+            }
             steps {
+                sh "echo ${person}"
                 sh "echo BUILD_NUMBER=${BUILD_NUMBER}"
                 sh "echo BUILD_TAG=${BUILD_TAG}"
                 sh "echo BUILD_URL=${BUILD_URL}"
