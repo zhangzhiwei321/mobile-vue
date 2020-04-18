@@ -4,7 +4,6 @@ pipeline {
           stage('Check') { 
             agent any
             steps {
-                sh "echo ${person}"
                 sh "echo BUILD_NUMBER=${BUILD_NUMBER}"
                 sh "echo BUILD_TAG=${BUILD_TAG}"
                 sh "echo BUILD_URL=${BUILD_URL}"
