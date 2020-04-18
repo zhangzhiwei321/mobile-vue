@@ -20,10 +20,8 @@ pipeline {
                 sh 'docker --version'
             }
              post {
-        
-                always{
-                sh 'node -v'
-                sh 'git --version'
+                 always{
+                     sh 'git --version'
                 }
             }
         }
