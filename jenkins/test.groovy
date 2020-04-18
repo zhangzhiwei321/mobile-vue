@@ -1,3 +1,4 @@
+input '00000'
 pipeline {
     agent none
     stages {
@@ -14,9 +15,6 @@ pipeline {
                 sh "echo NODE_NAME=${NODE_NAME}"
                 sh "echo WORKSPACE=${WORKSPACE}"
                 sh "echo params=${params}"
-            }
-            steps {
-                input '你好'
             }
         }
         stage('Build') { 
