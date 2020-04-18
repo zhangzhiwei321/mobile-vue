@@ -19,13 +19,14 @@ pipeline {
                 sh 'git --version'
                 sh 'docker --version'
             }
-        }
-    }
-    post {
+             post {
         
-        always{
-            sh 'node -v'
-           // sh 'git --version'
+                always{
+                sh 'node -v'
+                sh 'git --version'
+                }
+            }
         }
     }
+
 }
